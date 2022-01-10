@@ -26,6 +26,8 @@ import org.apache.dubbo.remoting.zookeeper.curator.CuratorZookeeperClient;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.DisabledForJreRange;
+import org.junit.jupiter.api.condition.JRE;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +35,7 @@ import java.util.List;
 /**
  * 2019-04-30
  */
+@DisabledForJreRange(min = JRE.JAVA_16)
 public class MultipleRegistry2S2RTest {
 
     private static final String SERVICE_NAME = "org.apache.dubbo.registry.MultipleService2S2R";

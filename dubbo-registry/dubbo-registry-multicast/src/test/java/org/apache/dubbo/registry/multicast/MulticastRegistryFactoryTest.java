@@ -20,12 +20,15 @@ import org.apache.dubbo.common.URL;
 import org.apache.dubbo.registry.Registry;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.DisabledForJreRange;
+import org.junit.jupiter.api.condition.JRE;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 
+@DisabledForJreRange(min = JRE.JAVA_16)
 public class MulticastRegistryFactoryTest {
     @Test
     public void shouldCreateRegistry() {
