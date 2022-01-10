@@ -36,6 +36,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.DisabledForJreRange;
+import org.junit.jupiter.api.condition.JRE;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -53,6 +55,7 @@ import static org.apache.dubbo.metadata.ServiceNameMapping.DEFAULT_MAPPING_GROUP
 /**
  * 2018/10/9
  */
+@DisabledForJreRange(min = JRE.JAVA_16)
 public class ZookeeperMetadataReportTest {
     private ZookeeperMetadataReport zookeeperMetadataReport;
     private URL registryUrl;
